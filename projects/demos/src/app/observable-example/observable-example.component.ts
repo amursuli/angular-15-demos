@@ -11,7 +11,7 @@ import {Observable} from "rxjs";
 })
 export class ObservableExampleComponent {
 
-  messages = [];
+  messages: string[] = [];
 
   constructor() {
       this.messages.push("Creating observable");
@@ -27,7 +27,7 @@ export class ObservableExampleComponent {
       observable.subscribe((data) => {
         this.messages.push("Got data from the observable >>>>> "+ data);
       });
-      
+
       this.messages.push("Observable.subscribe called");
   }
 }

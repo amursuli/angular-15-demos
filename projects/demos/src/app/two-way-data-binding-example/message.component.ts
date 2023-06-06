@@ -2,13 +2,13 @@ import {Component, Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-message',
-  template: `    
+  template: `
       <input type="text" [(ngModel)]="message">
   `
 })
 export class MessageComponent  {
 
-  messageValue: string;
+  messageValue: string = '';
 
   @Output()
   messageChange = new EventEmitter<string>();

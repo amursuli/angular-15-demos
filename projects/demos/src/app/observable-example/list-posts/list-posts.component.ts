@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
+import { map } from 'rxjs/operators';
 import {Post} from './post';
 import {PostsService} from './posts.service';
-import {map} from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-list-posts',

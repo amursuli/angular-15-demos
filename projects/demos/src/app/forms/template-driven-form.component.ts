@@ -9,7 +9,7 @@ export class TemplateDrivenFormComponent {
 
   constructor() {}
 
-  logForm(value) {
+  logForm(value: string) {
     console.log(value);
   }
 }

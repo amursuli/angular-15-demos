@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import {Person} from "../../../../../src/app/person.interface";
 
 @Component({
   selector: 'app-ngfor',
-  template: ` 
+  template: `
       <ul>
         <li *ngFor="let person of persons">
           {{ getDisplayName(person)  }}
@@ -68,7 +69,7 @@ export class NgforComponent {
     }
   ];
 
-  getDisplayName(person) {
+  getDisplayName(person: Person) {
     return person.name + " - Employer: " + person.company;
   }
 

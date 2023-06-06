@@ -11,9 +11,7 @@ export class ReactiveFormComponent implements OnInit {
 
   registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
-
-  ngOnInit() {
+  constructor(private formBuilder: FormBuilder) {
     this.registerForm = this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname: '',
@@ -22,6 +20,10 @@ export class ReactiveFormComponent implements OnInit {
       city: '',
       cc: ['', [Validators.required, CreditCardValidatorDirective.validateCcNumber] ]
     })
+  }
+
+  ngOnInit() {
+
   }
 
   logForm() {

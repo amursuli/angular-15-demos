@@ -26,7 +26,7 @@ export class CreditCardValidatorDirective implements Validator{
         return {creditCard : 'A credit card number must be 16-digit long'};
       }
     }
-    return null;
+    return [];
   }
 
 }
